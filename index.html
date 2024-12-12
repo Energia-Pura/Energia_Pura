@@ -10,6 +10,15 @@
       body {
         font-family: 'Roboto', sans-serif;
       }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50; /* Ensures the header stays above other content */
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
   </head>
   <body class="bg-gray-100">
@@ -18,32 +27,36 @@
         <a class="text-xl font-bold text-blue-500" href="index.html"> ENERGIA PURA </a>
         <nav class="relative z-50">
           <button id="menu-toggle" class="text-blue-500 text-xl flex items-center space-x-2 focus:outline-none">
-              <i class="fas fa-bars"></i>
-              <span>Menu</span>
+            <i class="fas fa-bars"></i>
+            <span>Menu</span>
           </button>
-          <div id="menu-list" class="hidden absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded shadow-md w-full max-w-xs">
-              
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100 " href="#objetivo">Objetivo</a>
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#sobre-ideia">Sobre Ideia</a>
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#ods">ODS</a>
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#pitch">Pitch</a>
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#parceria">Parceria</a>
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#aplicacoes">Aplicações</a>
+          
+          <div id="menu-list" class="hidden absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded shadow-md max-w-xs w-auto overflow-x-auto">
+            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#objetivo">Objetivo</a>
+            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#sobre-ideia">Sobre Ideia</a>
+            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#ods">ODS</a>
+            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#pitch">Pitch</a>
+            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#parceria">Parceria</a>
+            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#aplicacoes">Aplicações</a>
           </div>
-      </nav>
-      
-      <script>
-          document.getElementById('menu-toggle').addEventListener('click', function() {
+          
+          <script>
+            // Toggle menu visibility when the button is clicked
+            document.getElementById('menu-toggle').addEventListener('click', function() {
               const menuList = document.getElementById('menu-list');
               menuList.classList.toggle('hidden');
-      
+            });
+          
+            // Detect scroll and close menu if open
+            window.addEventListener('scroll', function() {
+              const menuList = document.getElementById('menu-list');
               if (!menuList.classList.contains('hidden')) {
-                  document.body.style.overflow = 'hidden'; // Prevent scrolling on the body
-              } else {
-                  document.body.style.overflow = 'auto'; // Restore scrolling on the body
+                menuList.classList.add('hidden'); // Close the menu when scrolling
               }
-          });
-      </script>
+            });
+          </script>
+          
+          
       </div>
     </header>
     <section class="relative">
