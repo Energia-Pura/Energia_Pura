@@ -21,14 +21,14 @@
               <i class="fas fa-bars"></i>
               <span>Menu</span>
           </button>
-          <div id="menu-list" class="hidden absolute top-full left-[-10px] mt-2 bg-white border border-gray-300 rounded shadow-md w-max">
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="index.html">Home</a>
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#objetivo">O Nosso Objetivo</a>
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#sobre-ideia">Sobre a Ideia</a>
+          <div id="menu-list" class="hidden absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded shadow-md w-full max-w-xs">
+              
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100 " href="#objetivo">Objetivo</a>
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#sobre-ideia">Sobre Ideia</a>
               <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#ods">ODS</a>
               <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#pitch">Pitch</a>
               <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#parceria">Parceria</a>
-              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#aplicações">Aplicações</a>
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#aplicacoes">Aplicações</a>
           </div>
       </nav>
       
@@ -38,15 +38,12 @@
               menuList.classList.toggle('hidden');
       
               if (!menuList.classList.contains('hidden')) {
-                  document.body.style.overflowX = 'hidden';
+                  document.body.style.overflow = 'hidden'; // Prevent scrolling on the body
               } else {
-                  document.body.style.overflowX = 'auto';
+                  document.body.style.overflow = 'auto'; // Restore scrolling on the body
               }
           });
       </script>
-      
-      
-      
       </div>
     </header>
     <section class="relative">
@@ -181,7 +178,7 @@
        Contato
       </h4>
       <p>
-       projeto.energia.pura@gmial.com
+       projeto.energia.pura@gmail.com
       </p>
      </div>
      <div class="mb-4 md:mb-0">
