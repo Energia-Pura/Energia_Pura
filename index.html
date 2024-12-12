@@ -16,9 +16,30 @@
     <header class="bg-white shadow">
       <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <a class="text-xl font-bold text-blue-500" href="index.html"> ENERGIA PURA </a>
-        <nav>
-          <a class="text-blue-500 text-xl" href="index.html"> Menu </a>
-        </nav>
+        <nav class="relative z-50">
+          <button id="menu-toggle" class="text-blue-500 text-xl flex items-center space-x-2 focus:outline-none">
+              <i class="fas fa-bars"></i>
+              <span>Menu</span>
+          </button>
+          <div id="menu-list" class="hidden absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded shadow-md w-max">
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="index.html">Home</a>
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#objetivo">O Nosso Objetivo</a>
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#sobre-ideia">Sobre a Ideia</a>
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#ods">ODS</a>
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#pitch">Pitch</a>
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#parceria">Parceria</a>
+              <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#aplicacoes">Aplicações</a>
+          </div>
+      </nav>
+      
+      <script>
+          document.getElementById('menu-toggle').addEventListener('click', function() {
+              const menuList = document.getElementById('menu-list');
+              menuList.classList.toggle('hidden');
+          });
+      </script>
+      
+      
       </div>
     </header>
     <section class="relative">
@@ -26,11 +47,7 @@
       <div class="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
         <h2 class="text-5xl font-bold"> ENERGIA PURA </h2>
         <p class="text-2xl"> Cada raio conta </p>
-        <div class="mt-4">
-          <a class="bg-blue-500 text-white px-4 py-2 rounded mr-2" href="#objetivo"> O Nosso Objetivo </a>
-          <a class="bg-blue-500 text-white px-4 py-2 rounded mr-2" href="#sobre-ideia"> Saiba Mais </a>
-          <a class="bg-blue-500 text-white px-4 py-2 rounded mr-2" href="#ods"> ODS </a>
-        </div>
+        
       </div>
     </section>
     <section id="objetivo" class="py-16 bg-white">
@@ -91,9 +108,9 @@
         </ul>
       </div>
     </section>
-    <section id="pitch" class="py-16 bg-gray-100">
+    <section id="pitch" class="py-16 bg-gray-900">
       <div class="container mx-auto px-4 text-center">
-          <h3 class="text-2xl font-bold mb-8"> Pitch </h3>
+          <h3 class="text-2xl font-bold mb-8 text-white"> Pitch </h3>
           <div class="relative" style="padding-bottom: 20%; height: 0; overflow: hidden; max-width: 40%; margin: 0 auto;">
               <iframe 
                   width="320" 
@@ -116,7 +133,7 @@
           <h3 class="text-2xl font-bold mb-8"> Parceria </h3>
           <p class="mb-8 text-l">A tentar parceria com FEUP. </p>
       
-          <!-- Image placeholder -->
+          
           <div class="mb-8">
             <img alt="Parceria com FEUP" class="mx-auto rounded-lg shadow-md" src="https://imgs.search.brave.com/in-7jCYIPMMAvW1qEBv1sWud-Zp_JsievzDeDMrjjfY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvcHQvdGh1bWIv/Mi8yYi9GZXVwb3J0/by5wbmcvMjAwcHgt/RmV1cG9ydG8ucG5n" width="600" height="400" />
           </div>
@@ -128,9 +145,9 @@
       
       
       
-    <section class="py-16 bg-gray-900 text-white">
+    <section id="aplicações" class="py-16 bg-gray-900 text-white">
       <div class="container mx-auto px-4 text-center">
-        <h3 class="text-2xl font-bold mb-8"> Aplicações </h3>
+        <h3  class="text-2xl font-bold mb-8"> Aplicações </h3>
         <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
           <div class="w-full md:w-1/3">
             <img alt="Icon representing residential solar applications" class="mx-auto mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/rBvqfImkDn3TGiXA7660qa15GAHC4KPEPSojdhiDMWr2A78JA.jpg" width="200"/>
