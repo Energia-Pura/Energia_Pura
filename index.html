@@ -1,72 +1,71 @@
-
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title> Energia Pura </title>
-    <script src="https://cdn.tailwindcss.com"> </script>
+    <title>Energia Pura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <style>
       body {
         font-family: 'Roboto', sans-serif;
+        background-color: #f7fafc;
       }
       header {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        z-index: 50; /* Ensures the header stays above other content */
+        z-index: 50;
         background-color: white;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+      }
     </style>
   </head>
-  <body class="bg-gray-100">
-    <header class="bg-gray-100 shadow">
-      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a class="text-xl font-bold text-blue-500" href="index.html"> ENERGIA PURA </a>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a class="text-3xl font-bold text-blue-600 hover:text-blue-800 transition-all" href="index.html">Energia Pura</a>
         <nav class="relative z-50">
-          <button id="menu-toggle" class="text-blue-500 text-xl flex items-center space-x-2 focus:outline-none">
+          <button id="menu-toggle" class="text-blue-500 text-xl flex items-center space-x-2 hover:text-blue-700 transition-all focus:outline-none">
             <i class="fas fa-bars"></i>
             <span>Menu</span>
           </button>
-          
-          <div id="menu-list" class="hidden absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded shadow-md max-w-xs w-auto overflow-x-auto">
+          <div id="menu-list" class="hidden absolute top-full left-0 mt-2 bg-white border border-gray-300 rounded-lg shadow-lg w-48">
             <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#objetivo">Objetivo</a>
             <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#sobre-ideia">Sobre Ideia</a>
             <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#ods">ODS</a>
             <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#pitch">Pitch</a>
+            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#provas-das-experiencias">Provas das Experiências</a>
             <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#parceria">Parceria</a>
-            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#aplicações">Aplicações</a>
-            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#sobre-nos">Sobre nós</a>
+            <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#sobre-nos">Sobre Nós</a>
             <a class="block px-4 py-2 text-blue-500 hover:bg-blue-100" href="#referencias">Referências</a>
           </div>
-          
           <script>
-            // Toggle menu visibility when the button is clicked
             document.getElementById('menu-toggle').addEventListener('click', function() {
               const menuList = document.getElementById('menu-list');
               menuList.classList.toggle('hidden');
             });
-          
-            // Detect scroll and close menu if open
             window.addEventListener('scroll', function() {
               const menuList = document.getElementById('menu-list');
               if (!menuList.classList.contains('hidden')) {
-                menuList.classList.add('hidden'); // Close the menu when scrolling
+                menuList.classList.add('hidden');
               }
             });
           </script>
-          
-          
+        </nav>
       </div>
     </header>
+
+    <!-- Hero Section -->
     <section class="relative">
-      <img alt="Solar panels under a blue sky with clouds" class="w-full h-96 object-cover" height="600" src="https://storage.googleapis.com/a1aa/image/Qtnh8KYFjaZ9J5LYyfMbExiwdGQuMmjU2B4phfI8vshrB25TA.jpg" width="1920"/>
+      <img alt="Solar panels under a blue sky" class="w-full h-[500px] object-cover" src="https://storage.googleapis.com/a1aa/image/Qtnh8KYFjaZ9J5LYyfMbExiwdGQuMmjU2B4phfI8vshrB25TA.jpg"/>
       <div class="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
-        <h2 class="text-5xl font-bold"> ENERGIA PURA </h2>
-        <p class="text-2xl"> Cada raio conta </p>
+        <h2 class="text-5xl font-extrabold">Energia Pura</h2>
+        <p class="text-2xl mt-4">Cada Raio Conta</p>
+      </div>
+    </section>
         
       </div>
     </section>
@@ -79,8 +78,8 @@
             <h4 class="text-xl font-bold mb-2"> Eficiente </h4>
             <p> Nosso objetivo é proporcionar energia eficiente e sustentável para todos, utilizando fontes de energia renováveis. </p>
           </div>
-          <div class="bg-blue-100 p-8 rounded-lg shadow-md w-full md:w-1/3">
-            <i class="fas fa-leaf text-4xl text-blue-500 mb-4"> </i>
+          <div class="bg-green-200 p-8 rounded-lg shadow-md w-full md:w-1/3">
+            <i class="fas fa-leaf text-4xl text-green-500 mb-4"> </i>
             <h4 class="text-xl font-bold mb-2"> RENTÁVEL </h4>
             <p> Planeámos produzir um produto em que o desempenho justifique qualquer aumento do preço de produção. </p>
           </div>
@@ -122,9 +121,11 @@
         <ul class="list-disc list-inside mb-8 text-left mx-auto max-w-2xl text-xl">
           <li> <strong>Painéis Solares Fotovoltaicos de silício monocristalinos:</strong> Capturam a luz solar e a transformam em eletricidade. </li>
           <li> <strong>Geradores Termoelétricos:</strong> Aproveitam o calor para gerar eletricidade adicional. </li>
-          <li> <strong>Controlador de Carga:</strong> Gerencia a distribuição da energia gerada. </li>
-          <li> <strong>Bateria de Armazenamento:</strong> Armazena energia para uso durante a noite ou em dias nublados. </li>
-          <li> <strong>Inversor:</strong> Converte corrente contínua (DC) para corrente alternada (AC). </li>
+          <li> <strong>Adesivo Térmico:</strong> aumentar transferência de calor entre o painel e o geradores Termoelétricos.</li>
+          <li> <strong>Arduino:</strong>Para medir a voltagem e a corrente elétrica</li>
+          <li> <strong>Breadboard</strong></li>
+          <li> <strong>Resistência variável</strong></li>
+          
         </ul>
       </div>
     </section>
@@ -146,20 +147,64 @@
           </div>
       </div>
   </section>
-  
-  
-      <section id="parceria" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-4 text-center">
-          <h3 class="text-2xl font-bold mb-8"> Parceria </h3>
-          <p class="mb-8 text-l">A tentar parceria com FEUP. </p>
-      
-          
-          <div class="mb-8">
-            <img alt="Parceria com FEUP" class="mx-auto rounded-lg shadow-md" src="https://imgs.search.brave.com/in-7jCYIPMMAvW1qEBv1sWud-Zp_JsievzDeDMrjjfY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvcHQvdGh1bWIv/Mi8yYi9GZXVwb3J0/by5wbmcvMjAwcHgt/RmV1cG9ydG8ucG5n" width="600" height="400" />
+  <section id="provas das Experiências" class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-extrabold mb-8 text-gray-800">Provas das Experiências</h3>
+      <p class="mb-8 text-lg text-gray-700">
+        Aqui estão algumas imagens e evidências das experiências realizadas para comprovar a eficácia do nosso projeto.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Imagem 1 -->
+        <div class="shadow-lg rounded-lg overflow-hidden">
+          <img src="WhatsApp Image 2025-03-20 at 08.15.21.jpeg" alt="Experiência 1" class="w-full h-50 object-cover">
+          <div class="p-4">
+            <h4 class="text-xl font-semibold text-gray-800">Teste de Eficiência Fotovoltaica</h4>
+            <p class="text-gray-600 mt-2">Medimos a geração de energia sob diferentes condições de luz e calculamos a potencia</p>
           </div>
-      
         </div>
-      </section>
+        <!-- Imagem 2 -->
+        <div class="shadow-lg rounded-lg overflow-hidden">
+          <img src="WhatsApp Image 2025-03-20 at 08.15.24.jpeg" alt="Experiência 2" class="w-full h-100 object-cover">
+          <div class="p-4">
+            <h4 class="text-xl font-semibold text-gray-800">Experimentar a melhor maneira de organizar os paineis fotovoltaicos com os modulos termoelétricos</h4>
+            <p class="text-gray-600 mt-2">Monitoramos a temperatura para otimizar o desempenho dos módulos e o aumento de potencia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="parceria" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-8">Parceria</h3>
+      <p class="mb-8 text-l">Parceria com FEUP.</p>
+  
+      <div class="flex justify-center items-center space-x-8 mb-8">
+        <div>
+          <img
+            alt="Parceria com FEUP"
+            class="rounded-lg shadow-md"
+            src="https://imgs.search.brave.com/in-7jCYIPMMAvW1qEBv1sWud-Zp_JsievzDeDMrjjfY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvcHQvdGh1bWIv/Mi8yYi9GZXVwb3J0/by5wbmcvMjAwcHgt/RmV1cG9ydG8ucG5n"
+            width="280"
+            height="280"
+          />
+          <p class="text-l mt-2">FEUP</p>
+        </div>
+  
+        <div>
+          <img
+            alt="Ana Isabel Palmero"
+            class="rounded-lg shadow-md"
+            src="https://sigarra.up.pt/feup/pt/FOTOGRAFIAS_SERVICE.foto?pct_cod=345923"
+            width="240"
+            height="240"
+          />
+          <p class="text-l mt-2">Prof. Ana Isabel Palmero</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
       
       
       
@@ -184,7 +229,7 @@
           <div class="lg:w-1/2 relative flex justify-center">
             <!-- Group Photo -->
             <div class="relative w-[768px] h-[576px] bg-gray-200 rounded-lg overflow-hidden shadow-md">
-              <img src="foto_grupo.jpeg" alt="Foto do grupo" class="object-cover w-full h-full">
+              <img src="foto_grupo.png" alt="Foto do grupo" class="object-cover w-full h-full">
       
               <!-- Labels and Arrows -->
               <div class="absolute inset-0 pointer-events-none">
